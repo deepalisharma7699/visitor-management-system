@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+    .btn-primary {
+        @apply px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium transition-colors;
+    }
+    
+    .btn-secondary {
+        @apply px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 font-medium transition-colors;
+    }
+    
+    .input-field {
+        @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors;
+    }
+    
+    .card {
+        @apply bg-white rounded-lg shadow-sm p-6;
+    }
+}
+
+/* Print styles */
+@media print {
+    header, nav, button:not(.print-only) {
+        display: none !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
